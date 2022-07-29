@@ -163,7 +163,7 @@ async def start_command(_, message):
                 reply_markup=keyboard,
             )
         if name[0] == "i":
-            m = await message.reply_text("🔎 Fetching Info!")
+            m = await message.reply_text("🔎 Mencari Info!")
             query = (str(name)).replace("info_", "", 1)
             query = f"https://www.youtube.com/watch?v={query}"
             results = VideosSearch(query, limit=1)
@@ -179,24 +179,24 @@ async def start_command(_, message):
             searched_text = f"""
 🔍__**Video Track Information**__
 
-❇️**Title:** {title}
+❇️**JUDUL:** {title}
 
-⏳**Duration:** {duration} Mins
-👀**Views:** `{views}`
-⏰**Published Time:** {published}
-🎥**Channel Name:** {channel}
-📎**Channel Link:** [Visit From Here]({channellink})
-🔗**Video Link:** [Link]({link})
+⏳**DURASI:** {duration} Menit
+👀**PENONTON:** `{views}`
+⏰**TANGGAL UPLOAD:** {published}
+🎥**NAMA CHANNEL:** {channel}
+📎**LINK CHANNEL:** [Visit From Here]({channellink})
+🔗**TAUTAN VIDEO:** [Link]({link})
 
 ⚡️ __Searched Powered By {BOT_NAME}t__"""
             key = InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="🎥 Watch Youtube Video", url=f"{link}"
+                            text="🎥 TONTON VIDEO", url=f"{link}"
                         ),
                         InlineKeyboardButton(
-                            text="🔄 Close", callback_data="close"
+                            text="🔄 TUTUP", callback_data="close"
                         ),
                     ],
                 ]
@@ -264,10 +264,10 @@ All commands can be used with: /
             [
                 [
                     InlineKeyboardButton(
-                        text="↪️ Back", callback_data="help_back"
+                        text="↪️ KEMBALI", callback_data="help_back"
                     ),
                     InlineKeyboardButton(
-                        text="🔄 Close", callback_data="close"
+                        text="🔄 TUTUP", callback_data="close"
                     ),
                 ],
             ]
